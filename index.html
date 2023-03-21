@@ -17,8 +17,22 @@
       <div>
         <h1>Library Project</h1>
         <div id="library">
-          <!-- Add table here -->
-          <table id="table" style="min-width: 680px; margin: 2rem">
+            <form id="book-form">
+              <div>
+                <label for="title-input">Title:</label>
+                <input type="text" id="title-input" name="title-input" required>
+              </div>
+              <div>
+                <label for="author-input">Author:</label>
+                <input type="text" id="author-input" name="author-input" required>
+              </div>
+              <div>
+                <label for="read-checkbox">Read:</label>
+                <input type="checkbox" id="read-checkbox" name="read-checkbox">
+              </div>
+              <button type="submit">Add Book</button>
+            </form>
+            <table id="table" style="min-width: 680px; margin: 2rem">
             <thead>
               <tr>
                 <th>Title</th>
