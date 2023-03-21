@@ -28,5 +28,20 @@ class Library {
     }
 }
 
+addBook(title,author,read){
+    const book = new Book(this.bookCount, title,author,read);
+    this.books.push(book);
+    const table = document.getElementById('booktable');
+    const row = table.insertRow(-1);
+    const titleCell = row.insertCell(0);
+    const authorCell = row.insertCell(1);
+    const readCell = row.insertCell(2);
+    titleCell.innerHTML = book.title;
+    authorCell.innerHTML = book.author;
+    readCell.innerHTML = '<input type="checkbox" ' + (book.read ? 'checked disabled' : '') + ' onclick="myLibrary.markRead(this, ' + book.id + ')">';
+    this.bookCount++;
+  }
 
+
+const myLibrary = new Library();
 
