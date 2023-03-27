@@ -17,7 +17,7 @@ class Library {
   }
 
   markRead(checkbox, id) {
-    for (let i = o; i < this.books.length; i++) {
+    for (let i = 0; i < this.books.length; i++) {
       if (this.books[i].id) {
         this.books[i].read = true;
         checkbox.checked = true;
@@ -28,6 +28,12 @@ class Library {
   }
 
   addBook(title, author, read) {
+      let tit = document.querySelector("#title-input")
+      let auth = document.querySelector("#author-input")
+      let rea = document.querySelector("#read-input")
+      auth.value;
+      tit.value;
+      rea.value;
     const book = new Book(this.bookCount, title, author, read);
     this.books.push(book);
     const table = document.getElementById("table");
@@ -41,12 +47,6 @@ class Library {
     this.bookCount++;
   }
 }
-let tit = document.querySelector("#title-input")
-let auth = document.querySelector("#author-input")
-let rea = document.querySelector("#read-input")
-auth.value;
-tit.value;
-rea.value;
 
 const myLibrary = new Library();
 const addBooksBtn = document.getElementById("addBooksBtn");
